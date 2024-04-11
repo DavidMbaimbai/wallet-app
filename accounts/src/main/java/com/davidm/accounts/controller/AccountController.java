@@ -166,12 +166,40 @@ public class AccountController {
                 .statusMessage(AccountsConstants.EXPECTATION_FAILED)
                 .build());
     }
-
+    @Operation(
+            summary = "Credit Account REST API",
+            description = "REST API to credit Customer & Account inside EasyBank"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "HTTP Status CREATED"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status Internal Server Error",
+                    content = @Content(schema = @Schema(implementation = ErrorDto.class))
+            )
+    })
     @PostMapping("credit")
     public ResponseDto creditAccount(@RequestBody CreditDebitRequest request){
         return customerService.creditAccount(request);
     }
-
+    @Operation(
+            summary = "Debit Account REST API",
+            description = "REST API to debit Customer & Account inside EasyBank"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "201",
+                    description = "HTTP Status CREATED"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status Internal Server Error",
+                    content = @Content(schema = @Schema(implementation = ErrorDto.class))
+            )
+    })
     @PostMapping("debit")
     public ResponseDto debitAccount(@RequestBody CreditDebitRequest request){
         return customerService.debitAccount(request);

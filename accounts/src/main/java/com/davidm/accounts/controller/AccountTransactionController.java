@@ -66,28 +66,6 @@ public class AccountTransactionController {
         return ResponseEntity.ok(savedAccountTransactions);
     }
 
-    @Operation(
-            summary = "Fetch Account Details REST API",
-            description = "REST API to fetch Customer & Account details based on a mobile number"
-    )
-    @ApiResponses({
-            @ApiResponse(
-                    responseCode = "200",
-                    description = "HTTP Status OK"
-            ),
-            @ApiResponse(
-                    responseCode = "500",
-                    description = "HTTP Status Internal Server Error",
-                    content = @Content(schema = @Schema(implementation = ErrorDto.class))
-            )
-    })
-    @GetMapping(path = "/transactions", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<AccountTransactions> getTransactionHistory(String token) {
-        Long customerId = customerService.getUserIdFromToken(token);
-        return accountTransactionService.findByCustomerId(customerId);
-    }
-
-
     @GetMapping("/api/java-home-info")
     public ResponseEntity<String> getJavaHomeInfo() {
         return ResponseEntity.ok(environment.getProperty("JAVA_HOME"));

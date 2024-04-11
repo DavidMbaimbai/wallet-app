@@ -137,7 +137,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .status(AccountsConstants.ACCOUNT_CREDITED_SUCCESS)
                 .statusMessage(AccountsConstants.ACCOUNT_CREDITED_SUCCESS_MESSAGE)
                 .accountInfo(AccountsConstants.builder()
-                        .accountName(customerToCredit.getFirstName() + " " + userToCredit.getLastName() + " " + userToCredit.getOtherName())
+                        .accountName(customerToCredit.getFirstName() + " " + customerToCredit.getLastName() + " " + customerToCredit.getOtherName())
                         .accountBalance(customerToCredit.getAccountBalance())
                         .accountNumber(request.getAccountNumber())
                         .build())
