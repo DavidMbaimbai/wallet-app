@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related Prod APIs"
+  contactDetails:
+    name: "David Mbaimbai - Developer"
+    email: "davymbaimbai@gmail.com"
+  onCallSupport:
+    - (555) 555-2467
+    - (555) 523-2349

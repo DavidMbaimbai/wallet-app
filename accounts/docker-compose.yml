@@ -1,6 +1,6 @@
 services:
   accounts:
-    image: "davidm/accounts:v1"
+    image: "davidm202/accounts:v1"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -11,7 +11,7 @@ services:
     networks:
       - davidm
   cards:
-    image: "davidm/cards:v1"
+    image: "davidm202/cards:v1"
     container_name: cards-ms
     ports:
       - "8090:8090"
@@ -22,7 +22,7 @@ services:
     networks:
       - davidm
   login:
-    image: "davidm/login:v1"
+    image: "davidm202/login:v1"
     container_name: cards-ms
     ports:
       - "8070:8070"
@@ -33,7 +33,7 @@ services:
     networks:
       - davidm
   loans:
-    image: "davidm/loans:v1"
+    image: "davidm202/loans:v1"
     container_name: loans-ms
     ports:
       - "9000:9000"
@@ -42,7 +42,7 @@ services:
         limits:
           memory: 700m
     networks:
-      - davidm
+      - davidm202
 networks:
   edsonj:
     driver: "bridge"

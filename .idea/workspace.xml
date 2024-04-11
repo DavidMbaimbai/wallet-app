@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77907742-3f1e-4c85-b4cb-47b0576458d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/config/SpringSecurity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/SignUpDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/main/resources/application_prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/main/resources/application_qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +31,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DavidMbaimbai"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="797efa66-1990-436a-adcf-d8915adaf5b1" />
+        <option name="url" value="git@github.com:DavidMbaimbai/wallet-app.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/resources/application_qa.yml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -58,14 +64,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AccountsApplication (1).executor": "Run",
+    "Spring Boot.AccountsApplication.executor": "Run",
+    "Spring Boot.AuthenticationApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/authentication",
+    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/accounts/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,11 +88,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\resources" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\authentication" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\service" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\repository" />
-      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,29 +104,34 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountsApplication (1)">
-    <configuration name="AccountsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+  <component name="RunManager" selected="Spring Boot.AccountsApplication">
+    <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="accounts" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.davidm.accounts.AccountsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="accounts" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.walletapp.accounts.AccountsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="authentication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.walletapp.authentication.AuthenticationApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AccountsApplication" />
+      <item itemvalue="Spring Boot.AuthenticationApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AccountsApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712820521729</updated>
-      <workItem from="1712820526075" duration="13824000" />
+      <workItem from="1712820526075" duration="16572000" />
     </task>
     <task id="LOCAL-00001" summary="Wallet App">
       <option name="closed" value="true" />
@@ -135,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712826436262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Wallet App">
+      <option name="closed" value="true" />
+      <created>1712834917564</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712834917564</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
