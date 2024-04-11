@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+accounts:
+  message: "Welcome to EazyBank accounts related QA APIs"
+  contactDetails:
+    name: "David Mbaimbai - Java Developer"
+    email: "davymbaimbai@gmail.com"
+  onCallSupport:
+    - (555) 555-2468
+    - (555) 523-2345

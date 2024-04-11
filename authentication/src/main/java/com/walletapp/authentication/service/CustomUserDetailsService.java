@@ -1,7 +1,7 @@
 package com.walletapp.authentication.service;
 
 
-import com.walletapp.authentication.entity.User;
+import com.walletapp.authentication.entity.AppUser;
 import com.walletapp.authentication.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,7 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService{
     }
 
     public org.springframework.security.core.userdetails.User loadUserByUsername(String usernameOrEmail) throws UsernameNotFoundException {
-        User user = userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail)
+        AppUser user = userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail)
                 .orElseThrow(() ->
                         new UsernameNotFoundException("User not found with username or email: "+ usernameOrEmail));
 

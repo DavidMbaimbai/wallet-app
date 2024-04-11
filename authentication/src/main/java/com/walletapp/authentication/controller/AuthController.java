@@ -3,7 +3,7 @@ package com.walletapp.authentication.controller;
 import com.walletapp.authentication.dto.LoginDto;
 import com.walletapp.authentication.dto.SignUpDto;
 import com.walletapp.authentication.entity.Role;
-import com.walletapp.authentication.entity.User;
+import com.walletapp.authentication.entity.AppUser;
 import com.walletapp.authentication.repository.RoleRepository;
 import com.walletapp.authentication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class AuthController {
         }
 
         // create user object
-        User user = new User();
+        AppUser user = new AppUser();
         user.setName(signUpDto.getName());
         user.setUsername(signUpDto.getUsername());
         user.setEmail(signUpDto.getEmail());

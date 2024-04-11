@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77907742-3f1e-4c85-b4cb-47b0576458d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/application_prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/application_qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/CustomUserDetailsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +48,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/AccountsApplication.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/accounts/src/main/resources/application_qa.yml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" root0="SKIP_INSPECTION" />
@@ -57,6 +67,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.authentication.login: Compose Deployment.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -69,23 +80,24 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/accounts/src/main/resources",
+    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/authentication/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsDialog.application.dockerMachine",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\ASSESSMENT-WALLET-APP\authentication\src\main\resources" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\resources" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\authentication" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\service" />
-      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,7 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountsApplication">
+  <component name="RunManager" selected="Spring Boot.AuthenticationApplication">
     <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -116,12 +128,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="authentication.login: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="login" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="authentication/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.authentication.login: Compose Deployment" />
       <item itemvalue="Spring Boot.AccountsApplication" />
       <item itemvalue="Spring Boot.AuthenticationApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.authentication.login: Compose Deployment" />
         <item itemvalue="Spring Boot.AccountsApplication" />
       </list>
     </recent_temporary>
@@ -134,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712820521729</updated>
-      <workItem from="1712820526075" duration="20658000" />
+      <workItem from="1712820526075" duration="22899000" />
     </task>
     <task id="LOCAL-00001" summary="Wallet App">
       <option name="closed" value="true" />
@@ -168,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712840886445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Wallet App">
+      <option name="closed" value="true" />
+      <created>1712842028569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712842028569</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

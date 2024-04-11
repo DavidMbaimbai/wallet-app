@@ -10,7 +10,7 @@ import java.util.Set;
 @Setter
 @ToString(callSuper = true)
 @Entity
-public class User {
+public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

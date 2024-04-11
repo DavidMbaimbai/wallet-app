@@ -23,7 +23,7 @@ services:
       - davidm
   login:
     image: "davidm/login:v1"
-    container_name: cards-ms
+    container_name: login-ms
     ports:
       - "8070:8070"
     deploy:
