@@ -64,23 +64,19 @@ public class AccountTransactionController {
         var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
         return ResponseEntity.ok(savedAccountTransactions);
     }
-    @PostMapping(path = "/transact", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody final CustomerDto accountDto) {
-        customerService.createAccount(accountDto);
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(ResponseDto.builder()
-                        .status(AccountsConstants.STATUS_201)
-                        .statusMessage(AccountsConstants.MESSAGE_201)
-                        .build());
+    @PostMapping(path = "/make-transaction", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AccountTransactions> makeTransaction(@RequestBody AccountTransactions accountTransactions) throws AccountNotFoundException {
+        var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
+        return ResponseEntity.ok(savedAccountTransactions);
     }
-    @GetMapping("/java-home")
-    public ResponseEntity<String> getJavaHome() {
+
+    @GetMapping("/api/java-home-info")
+    public ResponseEntity<String> getJavaHomeInfo() {
         return ResponseEntity.ok(environment.getProperty("JAVA_HOME"));
     }
 
-    @GetMapping("/build-version")
-    public ResponseEntity<String> getVersion() {
+    @GetMapping("/transact/build-version")
+    public ResponseEntity<String> getBuildVersion() {
         return ResponseEntity.ok(buildVersion);
     }
 
