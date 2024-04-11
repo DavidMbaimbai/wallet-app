@@ -18,6 +18,8 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @Entity
 public class AccountTransactions extends BaseEntity {
+    @Column(name = "customer_id")
+    private Long customerId;
     @Id
     @Column(name = "transaction_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
