@@ -19,4 +19,5 @@ public class ResponseDto {
     private String status;
     @Schema(description = "Status message in the response", example = "Request processed successfully")
     private String statusMessage;
+    private AccountInfo accountInfo;
 }

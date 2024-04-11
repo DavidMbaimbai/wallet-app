@@ -25,6 +25,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.security.auth.login.AccountNotFoundException;
+import java.util.List;
 
 @Tag(
         name = "CRUD REST APIs for Accounts in EasyBank",
@@ -59,16 +60,33 @@ public class AccountTransactionController {
             )
     })
 
-    @PostMapping(path = "/transact", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AccountTransactions> transact(@RequestBody AccountTransactions accountTransactions) throws AccountNotFoundException {
         var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
         return ResponseEntity.ok(savedAccountTransactions);
     }
-    @PostMapping(path = "/make-transaction", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AccountTransactions> makeTransaction(@RequestBody AccountTransactions accountTransactions) throws AccountNotFoundException {
-        var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
-        return ResponseEntity.ok(savedAccountTransactions);
+
+    @Operation(
+            summary = "Fetch Account Details REST API",
+            description = "REST API to fetch Customer & Account details based on a mobile number"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP Status OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status Internal Server Error",
+                    content = @Content(schema = @Schema(implementation = ErrorDto.class))
+            )
+    })
+    @GetMapping(path = "/transactions", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<AccountTransactions> getTransactionHistory(String token) {
+        Long customerId = customerService.getUserIdFromToken(token);
+        return accountTransactionService.findByCustomerId(customerId);
     }
+
 
     @GetMapping("/api/java-home-info")
     public ResponseEntity<String> getJavaHomeInfo() {

@@ -9,4 +9,8 @@ import java.util.Optional;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     Optional<Customer> findCustomerByMobileNumber(final String mobileNumber);
+
+    boolean existsByAccountNumber(Long accountNumber);
+
+    Customer findByAccountNumber(Long accountNumber);
 }

@@ -2,9 +2,7 @@ package com.davidm.accounts.service;
 
 
 import com.davidm.accounts.constants.AccountsConstants;
-import com.davidm.accounts.dto.AccountDto;
-import com.davidm.accounts.dto.AccountTransactionDto;
-import com.davidm.accounts.dto.CustomerDto;
+import com.davidm.accounts.dto.*;
 import com.davidm.accounts.entity.Account;
 import com.davidm.accounts.entity.AccountTransactions;
 import com.davidm.accounts.entity.Customer;
@@ -20,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Random;
@@ -118,6 +117,69 @@ public class CustomerServiceImpl implements CustomerService {
         return true;
     }
 
+
+    @Override
+    public ResponseDto creditAccount(CreditDebitRequest request) {
+        //checking if the account exists
+        boolean isAccountExist = customerRepository.existsByAccountNumber(request.getAccountNumber());
+        if (!isAccountExist){
+            return ResponseDto.builder()
+                    .status(AccountsConstants.ACCOUNT_NOT_EXIST_CODE)
+                    .statusMessage(AccountsConstants.ACCOUNT_NOT_EXIST_MESSAGE)
+                    .build();
+        }
+
+        Customer customerToCredit = customerRepository.findByAccountNumber(request.getAccountNumber());
+        customerToCredit.setAccountBalance(customerToCredit.getAccountBalance().add(request.getAmount()));
+        customerRepository.save(customerToCredit);
+
+        return ResponseDto.builder()
+                .status(AccountsConstants.ACCOUNT_CREDITED_SUCCESS)
+                .statusMessage(AccountsConstants.ACCOUNT_CREDITED_SUCCESS_MESSAGE)
+                .accountInfo(AccountsConstants.builder()
+                        .accountName(customerToCredit.getFirstName() + " " + userToCredit.getLastName() + " " + userToCredit.getOtherName())
+                        .accountBalance(customerToCredit.getAccountBalance())
+                        .accountNumber(request.getAccountNumber())
+                        .build())
+                .build();
+    }
+
+    @Override
+    public ResponseDto debitAccount(CreditDebitRequest request) {
+        //check if the account exists
+        //check if the amount you intend to withdraw is not more than the current account balance
+        boolean isAccountExist = customerRepository.existsByAccountNumber(request.getAccountNumber());
+        if (!isAccountExist){
+            return ResponseDto.builder()
+                    .status(AccountsConstants.ACCOUNT_NOT_EXIST_CODE)
+                    .statusMessage(AccountsConstants.ACCOUNT_NOT_EXIST_MESSAGE)
+                    .build();
+        }
+
+        Customer customerToDebit = customerRepository.findByAccountNumber(request.getAccountNumber());
+        Long availableBalance =customerToDebit.getAccountBalance();
+        BigInteger debitAmount = request.getAmount().toBigInteger();
+        if ( availableBalance.intValue() < debitAmount.intValue()){
+            return ResponseDto.builder()
+                    .status(AccountsConstants.INSUFFICIENT_BALANCE_CODE)
+                    .statusMessage(AccountsConstants.INSUFFICIENT_BALANCE_MESSAGE)
+                    .build();
+        }
+        else {
+            customerToDebit.setAccountBalance(customerToDebit.getAccountBalance().subtract(request.getAmount()));
+            customerRepository.save(customerToDebit);
+            return ResponseDto.builder()
+                    .status(AccountsConstants.ACCOUNT_DEBITED_SUCCESS)
+                    .statusMessage(AccountsConstants.ACCOUNT_DEBITED_MESSAGE)
+                    .accountInfo(ResponseDto.builder()
+                            .accountNumber(request.getAccountNumber())
+                            .accountName(customerToDebit.getFirstName() + " " + userToDebit.getLastName() + " " + userToDebit.getOtherName())
+                            .accountBalance(customerToDebit.getAccountBalance())
+                            .build())
+                    .build();
+        }
+
+    }
     private Account createAccount(final Customer savedCustomer) {
         Long accountNumber = 100_000_000_000L + new Random().nextLong(90_000_000_000L);
         Account account = new Account();

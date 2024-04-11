@@ -2,10 +2,7 @@ package com.davidm.accounts.controller;
 
 
 import com.davidm.accounts.constants.AccountsConstants;
-import com.davidm.accounts.dto.AccountsContactInfoDto;
-import com.davidm.accounts.dto.CustomerDto;
-import com.davidm.accounts.dto.ErrorDto;
-import com.davidm.accounts.dto.ResponseDto;
+import com.davidm.accounts.dto.*;
 import com.davidm.accounts.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -168,6 +165,16 @@ public class AccountController {
                 .status(AccountsConstants.STATUS_417)
                 .statusMessage(AccountsConstants.EXPECTATION_FAILED)
                 .build());
+    }
+
+    @PostMapping("credit")
+    public ResponseDto creditAccount(@RequestBody CreditDebitRequest request){
+        return customerService.creditAccount(request);
+    }
+
+    @PostMapping("debit")
+    public ResponseDto debitAccount(@RequestBody CreditDebitRequest request){
+        return customerService.debitAccount(request);
     }
 
     @GetMapping("/java-home")

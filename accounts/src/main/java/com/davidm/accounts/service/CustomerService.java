@@ -1,7 +1,9 @@
 package com.davidm.accounts.service;
 
 
+import com.davidm.accounts.dto.CreditDebitRequest;
 import com.davidm.accounts.dto.CustomerDto;
+import com.davidm.accounts.dto.ResponseDto;
 
 public interface CustomerService {
 
@@ -30,5 +32,7 @@ public interface CustomerService {
      * @return - returns whether it has deleted or not
      */
     boolean deleteCustomerDetails(String mobileNumber);
+    ResponseDto debitAccount(CreditDebitRequest request);
+    ResponseDto creditAccount(CreditDebitRequest request);
 }
 
