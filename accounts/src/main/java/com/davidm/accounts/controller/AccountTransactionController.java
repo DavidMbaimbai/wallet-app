@@ -2,7 +2,6 @@ package com.davidm.accounts.controller;
 
 
 import com.davidm.accounts.constants.AccountsConstants;
-import com.davidm.accounts.dto.AccountTransactionDto;
 import com.davidm.accounts.dto.CustomerDto;
 import com.davidm.accounts.dto.ErrorDto;
 import com.davidm.accounts.dto.ResponseDto;
@@ -59,9 +58,15 @@ public class AccountTransactionController {
                     content = @Content(schema = @Schema(implementation = ErrorDto.class))
             )
     })
+
     @PostMapping(path = "/transact", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody final AccountTransactionDto accountTransactionsDto) {
-        accountTransactionService.saveTransaction(accountTransactionsDto);
+    public ResponseEntity<AccountTransactions> transact(@RequestBody AccountTransactions accountTransactions) throws AccountNotFoundException {
+        var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
+        return ResponseEntity.ok(savedAccountTransactions);
+    }
+    @PostMapping(path = "/transact", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody final CustomerDto accountDto) {
+        customerService.createAccount(accountDto);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(ResponseDto.builder()

@@ -5,44 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77907742-3f1e-4c85-b4cb-47b0576458d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSESSMENT-WALLET-APP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/auditing/JpaEntityAuditing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/constants/AccountsConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/constants/TransactionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/AccountDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/AccountTransactionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/AccountsContactInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/CustomerDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/ErrorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/dto/ResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/entity/AccountTransactions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/exceptions/CustomerAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/mapper/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/mapper/AccountTransactionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/mapper/CustomerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/repository/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/repository/AccountTransactionsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codealike.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/config/SpringSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/SignUpDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/service/UserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/service/AccountTransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,6 +42,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/accounts/src/main/java/com/davidm/accounts/controller/AccountController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/repository/UserRepository.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,23 +65,33 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/accounts/src/main/java/com/davidm/accounts/service",
+    "last_opened_file_path": "C:/projects/ASSESSMENT-WALLET-APP/authentication",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\ASSESSMENT-WALLET-APP\authentication" />
+      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\service" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\repository" />
       <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\mapper" />
-      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\exceptions" />
-      <recent name="C:\projects\ASSESSMENT-WALLET-APP\accounts\src\main\java\com\davidm\accounts\entity" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AccountsApplication (1)">
     <configuration name="AccountsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -118,6 +109,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.walletapp.authentication.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -127,11 +125,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712820521729</updated>
-      <workItem from="1712820526075" duration="5877000" />
+      <workItem from="1712820526075" duration="13824000" />
     </task>
+    <task id="LOCAL-00001" summary="Wallet App">
+      <option name="closed" value="true" />
+      <created>1712826436262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712826436262</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wallet App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wallet App" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/config/SpringSecurity.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/walletapp/authentication/controller/AuthController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
