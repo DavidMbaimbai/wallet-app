@@ -1,10 +1,6 @@
 package com.davidm.accounts.entity;
 import com.davidm.accounts.constants.TransactionType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -30,4 +26,6 @@ public class AccountTransactions extends BaseEntity {
     private LocalDateTime transactionDate;
     @Column(name = "account_number")
     private Long accountNumber;
+    @ManyToOne
+    private Customer customer;
 }

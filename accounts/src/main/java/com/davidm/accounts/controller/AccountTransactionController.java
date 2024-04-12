@@ -65,7 +65,6 @@ public class AccountTransactionController {
         var savedAccountTransactions = accountTransactionService.saveTransaction(accountTransactions);
         return ResponseEntity.ok(savedAccountTransactions);
     }
-
     @GetMapping("/api/java-home-info")
     public ResponseEntity<String> getJavaHomeInfo() {
         return ResponseEntity.ok(environment.getProperty("JAVA_HOME"));

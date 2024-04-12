@@ -1,16 +1,14 @@
 package com.davidm.accounts.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -37,4 +35,6 @@ public class Customer extends BaseEntity {
     private BigDecimal accountBalance;
     @Column(name = "account_number")
     private Long accountNumber;
+    @OneToMany
+    private List<AccountTransactions> transactions = new ArrayList<>();
 }
