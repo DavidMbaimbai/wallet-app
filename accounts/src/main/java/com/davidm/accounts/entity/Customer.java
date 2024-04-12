@@ -35,4 +35,6 @@ public class Customer extends BaseEntity {
     private String mobileNumber;
     @Column(name = "account_balance")
     private BigDecimal accountBalance;
+    @Column(name = "account_number")
+    private Long accountNumber;
 }
