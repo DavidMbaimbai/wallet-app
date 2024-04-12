@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Objects;
 import java.util.Optional;
@@ -136,10 +137,10 @@ public class CustomerServiceImpl implements CustomerService {
         return ResponseDto.builder()
                 .status(AccountsConstants.ACCOUNT_CREDITED_SUCCESS)
                 .statusMessage(AccountsConstants.ACCOUNT_CREDITED_SUCCESS_MESSAGE)
-                .accountInfo(AccountsConstants.builder()
+                .accountInfo(AccountInfo.builder()
                         .accountName(customerToCredit.getFirstName() + " " + customerToCredit.getLastName() + " " + customerToCredit.getOtherName())
                         .accountBalance(customerToCredit.getAccountBalance())
-                        .accountNumber(request.getAccountNumber())
+                        .accountNumber(String.valueOf(request.getAccountNumber()))
                         .build())
                 .build();
     }
@@ -157,7 +158,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         Customer customerToDebit = customerRepository.findByAccountNumber(request.getAccountNumber());
-        Long availableBalance =customerToDebit.getAccountBalance();
+        BigInteger availableBalance =customerToDebit.getAccountBalance().toBigInteger();
         BigInteger debitAmount = request.getAmount().toBigInteger();
         if ( availableBalance.intValue() < debitAmount.intValue()){
             return ResponseDto.builder()
@@ -171,9 +172,9 @@ public class CustomerServiceImpl implements CustomerService {
             return ResponseDto.builder()
                     .status(AccountsConstants.ACCOUNT_DEBITED_SUCCESS)
                     .statusMessage(AccountsConstants.ACCOUNT_DEBITED_MESSAGE)
-                    .accountInfo(ResponseDto.builder()
-                            .accountNumber(request.getAccountNumber())
-                            .accountName(customerToDebit.getFirstName() + " " + userToDebit.getLastName() + " " + userToDebit.getOtherName())
+                    .accountInfo(AccountInfo.builder()
+                            .accountNumber(String.valueOf(request.getAccountNumber()))
+                            .accountName(customerToDebit.getFirstName() + " " + customerToDebit.getLastName() + " " + customerToDebit.getOtherName())
                             .accountBalance(customerToDebit.getAccountBalance())
                             .build())
                     .build();

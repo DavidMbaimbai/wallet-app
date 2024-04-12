@@ -10,6 +10,8 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @ToString(callSuper = true)
@@ -21,10 +23,16 @@ public class Customer extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native")
     private Long customerId;
-    private String name;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "other_name")
+    private String otherName;
+    private String gender;
     private String email;
     @Column(name = "mobile_number")
     private String mobileNumber;
     @Column(name = "account_balance")
-    private Long accountBalance;
+    private BigDecimal accountBalance;
 }

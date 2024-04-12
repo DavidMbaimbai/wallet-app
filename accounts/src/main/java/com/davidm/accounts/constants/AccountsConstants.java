@@ -1,5 +1,8 @@
 package com.davidm.accounts.constants;
 
+import lombok.Builder;
+
+@Builder
 public class AccountsConstants {
     private AccountsConstants() {
 
